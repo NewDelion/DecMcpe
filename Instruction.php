@@ -51,7 +51,7 @@ class Instruction{
 			return;
 		}
 		if(!preg_match(/** @lang RegExp */
-			'%([a-f0-9]+):[\t ]+([0-9a-f]{4}( [0-9a-f]{4})?)[\t ]+([a-z]+)(\.([a-z0-9]))?([\t ]+([^;]+)(;.*)?)?$%', $line, $match)
+			'%([a-f0-9]+):[\t ]+([0-9a-f]{4}( [0-9a-f]{4})?)[\t ]+([a-z0-9]+)(\.([a-z0-9]+))?([\t ]+([^;]+)(;.*)?)?$%', $line, $match)
 		){
 			echo $line, PHP_EOL;
 			throw new InvalidArgumentException("Not an instruction");
